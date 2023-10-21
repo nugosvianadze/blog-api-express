@@ -3,7 +3,9 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
-const { MONGO_URL, PORT } = process.env;
+const MONGO_URL = process.env.MONGO_URL;
+const PORT = process.env.PORT;
+
 
 mongoose
   .connect(MONGO_URL, {
